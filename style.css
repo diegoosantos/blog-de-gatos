@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Mulish', sans-serif;
+  --color-blue: #387E96;
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 43rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+header {
+  width: 1920px;
+  background-color: var(--color-blue)
+}
+
+nav {
+  max-width: 43rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2.5rem;
+  margin: auto;
+  padding: 1.6rem;
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input {
+  width: 24rem; 
+  height: 4rem;
+  font-family: 'Mulish', sans-serif;
+  border: none;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.20);
+  padding: 1.4rem;
+}
+
+.input-wrapper input::placeholder {
+  color: white;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main #cat {
+  width: 43rem;
+  margin-bottom: 3rem;
+  object-fit: cover;
+}
+
+main h1 {
+  margin: 0 0 .8rem 2.2rem;
+  font-size: 2.4rem;
+  line-height: 160%;
+  font-weight: 700;
+}
+
+.avaliation {
+  margin-left: 2.2rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+main p {
+  margin: 3rem 2.4rem;
+  font-size: 1.6rem;
+  line-height: 160%;
+  font-weight: 400;
+}
+
+.sidebar {
+  margin: 0 2.4rem 4rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+  line-height: 160%;
+  font-weight: 700;
+  margin-bottom: 3.2rem;
+}
+
+.artigo {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  margin-bottom: 3.2rem;
+}
+
+.artigo img {
+  max-height: 8.4rem;
+}
+
+.artigo h3 {
+  font-size: 1.8rem;
+  line-height: 160%;
+  font-weight: 700;
+}
+
+.artigo p {
+  font-size: 1.4rem;
+  line-height: 160%;
+  font-weight: 400;
+}
+
+footer {
+ 
+  width: 100vh;
+  padding: 2.6rem;
+  background-color: var(--color-blue);
+  margin-bottom: 0;
+  bottom: 0;
+}
+
+footer p {
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: white;
+}
+
+@media (min-width: 700px) {  
+body {
+  width: 100vw;
+  min-width: 100vh; 
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-areas: 
+  "header header"
+  "main sidebar"
+  "footer footer";
+}
+
+header {
+  grid-area: header;
+  width: 100vw;
+}
+
+header nav {
+  max-width: 100%;
+}
+
+.input-wrapper input {
+  min-width: 1030px;
+}
+
+main {
+  margin: 4.4rem 3.4rem 3.9rem 10.9rem;
+  grid-area: main;
+  width: 800px;
+  object-fit: cover;
+}
+
+main #cat {
+  width: 100%;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  width: 384px;
+}
+
+footer {
+  grid-area: footer;
+  width: 100vw;
+  
+} 
+}
